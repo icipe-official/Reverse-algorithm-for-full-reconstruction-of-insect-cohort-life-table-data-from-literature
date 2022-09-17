@@ -512,15 +512,14 @@ indiv_ovip_32_r <- round(indiv_ovip_32, 0)
 sum(indiv_ovip_32_r)
 
 #.. Outcome of the distribution of egg per individual in at each temperature
-ovi_distr <- seq(max(length(indiv_ovip_18_r), length(indiv_ovip_20_r), length(indiv_ovip_25_r), length(indiv_ovip_30_r), length(indiv_ovip_32_r)))
+ovi_distr <- seq(max(length(indiv_ovip_20_r), length(indiv_ovip_25_r), length(indiv_ovip_30_r), length(indiv_ovip_32_r)))
 
-ovi_distr_df <- data.frame(indiv_ovip_18_r[ovi_distr], 
-                           indiv_ovip_20_r[ovi_distr], 
+ovi_distr_df <- data.frame(indiv_ovip_20_r[ovi_distr], 
                            indiv_ovip_25_r[ovi_distr], 
                            indiv_ovip_30_r[ovi_distr], 
                            indiv_ovip_32_r[ovi_distr]) 
 
-colnames(ovi_distr_df) <- c('indiv_pest_ovip_18','indiv_pest_ovip_20','indiv_pest_ovip_25', 'indiv_pest_ovip_30', 'indiv_pest_ovip_32')
+colnames(ovi_distr_df) <- c('indiv_pest_ovip_20','indiv_pest_ovip_25', 'indiv_pest_ovip_30', 'indiv_pest_ovip_32')
 ovi_distr_df
 
 # step (2): DISTRIBUTION OF TOTAL EGGS/INDIVIDUAL PEST ACROSS OVIPOSITION PERIOD AT EACH TEMPERATURE
@@ -553,7 +552,7 @@ table_20_final_lf
 sum(table_20_final_lf)
 options(max.print=10000)
 table_20_final_lf
-sum(table_18_final_lf)
+
 
 #.............................temp 25.........................................
 set.seed(251)
@@ -614,9 +613,12 @@ sum(table_32_final_lf)
 #Summary Tables 
 ovi_distr_df
 
-table_18_final_lf
+
 table_20_final_lf
 table_25_final_lf
 table_30_final_lf
 table_32_final_lf
+
+
+
 
